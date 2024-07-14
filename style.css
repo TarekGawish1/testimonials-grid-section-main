@@ -1,0 +1,149 @@
+@font-face {
+    font-family: Barlow;
+    src: url(fonts/Barlow_Semi_Condensed/BarlowSemiCondensed-Regular.ttf);
+}
+
+:root {
+    --moderateViolet: hsl(263, 55%, 52%);
+    --veryDarkGrayIshBlue: hsl(217, 19%, 35%);
+    --veryDarkBlackIshBlue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+    --lightGray: hsl(0, 0%, 81%);
+    --lightGrayishBlue: hsl(210, 46%, 95%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--lightGrayishBlue);
+    font-family: Barlow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+main {
+    width: 1110px;
+    height: 572px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2 auto);
+    column-gap: 30px;
+    row-gap: 24px;
+}
+
+article {
+    border-radius: 8px;
+    background-color: var(--moderateViolet);
+    padding: 24px 38px 36px 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+img {
+    margin-right: 14px;
+    width: 32px;
+    border-radius: 50%;
+    border: 2px solid hsla(0, 0%, 100%, 0.5);
+}
+
+blockquote {
+    margin-bottom: 20px;
+}
+
+section h2 {
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.dark-text-name {
+    color: var(--veryDarkBlackIshBlue);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+section>p {
+    color: hsla(0, 0%, 100%, 0.5);
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.2em;
+}
+
+.dark-text-title {
+    color: hsla(219, 29%, 14%, 0.5);
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.2em;
+}
+
+blockquote>p {
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2em;
+}
+
+.blockquote-paragraph {
+    color: var(--veryDarkBlackIshBlue);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2em;
+}
+
+.paragraph {
+    color: hsla(219, 29%, 14%, 0.5);
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.2em;
+}
+
+
+
+.card-one {
+    background-color: var(--moderateViolet);
+    grid-column: span 2;
+    background-image: url(images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: 80% 0;
+}
+
+.card-two {
+    background-color: var(--veryDarkGrayIshBlue);
+}
+
+.card-three {
+    background-color: var(--white);
+    order: 4;
+}
+
+.card-four {
+    background-color: var(--veryDarkBlackIshBlue);
+    grid-column: span 2;
+    order: 5;
+}
+
+.card-five {
+    background-color: var(--white);
+    grid-row: span 2;
+    order: 3;
+}
+
+@media (max-width: 375px) {
+    main {
+        width: auto;
+        height: 572px;
+        display: flex;
+        flex-direction: column;
+    }
+}
